@@ -1,17 +1,13 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 import modelOptions from "./model.options";
 
 export default mongoose.model(
-  "Review",
+  "Favorite",
   mongoose.Schema(
     {
       user: {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true,
-      },
-      content: {
-        type: String,
         required: true,
       },
       mediaType: {
@@ -29,6 +25,10 @@ export default mongoose.model(
       },
       mediaPoster: {
         type: String,
+        required: true,
+      },
+      mediaRate: {
+        type: Number,
         required: true,
       },
     },
