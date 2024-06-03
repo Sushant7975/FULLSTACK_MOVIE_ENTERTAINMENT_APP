@@ -34,9 +34,9 @@ const signup = async (req, res) => {
     responseHandler.error(res);
   }
 };
-
+ 
 const signin = async (req, res) => {
-  try {
+   try { 
     const { username, password } = req.body;
 
     const user = await userModel

@@ -1,6 +1,6 @@
 import express from "express";
 import body from "express-validator";
-import favoriteController from "../controllers/favorite.controller";
+import favoriteController from "../controllers/favorite.controller.js";
 import userController from "../controllers/user.controller";
 import requestHandler from "../handlers/request.handler";
 import userModel from "../models/user.model";
@@ -111,6 +111,7 @@ router.post(
   body("mediaTitle").exists().withMessage("mediaTitle is required"),
   body("mediaPoster").exists().withMessage("mediaPoster is required"),
   body("mediaRate").exists().withMessage("mediaRate is required"),
+  requestHandler.validate,
   favoriteController.addFavorite
 );
 
