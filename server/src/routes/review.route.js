@@ -1,9 +1,9 @@
 import express from "express";
 import { body } from "express-validator";
-import reviewController from "../controllers/review.controller";
-import tokenMiddleware from "../middlewares/token.middleware";
-import requestHandler from "../handlers/request.handler";
-import responseHandler from "../handlers/response.handler";
+import reviewController from "../controllers/review.controller.js";
+import tokenMiddleware from "../middlewares/token.middleware.js";
+import requestHandler from "../handlers/request.handler.js";
+import responseHandler from "../handlers/response.handler.js";
 
 const router = express.Router({ mergeParams: true });
 
