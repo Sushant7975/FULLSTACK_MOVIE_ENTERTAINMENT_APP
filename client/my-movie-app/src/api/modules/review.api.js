@@ -22,7 +22,6 @@ const reviewApi = {
       return { err };
     }
   },
-
   remove: async ({ reviewId }) => {
     try {
       const response = await privateClient.delete(
